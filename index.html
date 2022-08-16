@@ -441,11 +441,11 @@
           <div class="col-md-6 order-md-last d-flex">
             <form id="submit-form"  action="" class="bg-light p-4 p-md-5 contact-form">
               <div class="form-group">
-                <input id="name" type="text"name="name" class="form-control" placeholder="Your Name" type="text" onkeyup="validatename()">
+                <input id="name" type="text"name="name" class="form-control" placeholder="Your Name *" type="text" onkeyup="validatename()" >
 				<div id="name-error" class="form-group "></div>
               </div>
               <div class="form-group ">
-                <input id="email" type="text"name="email" class="form-control" placeholder="Your Email" type="email" onkeyup="validateEmail()">
+                <input id="email" type="text"name="email" class="form-control" placeholder="Your Email *" type="email" onkeyup="validateEmail()">
 				<div id="email-error" class="form-group"></div>
               </div>
               <div class="form-group">
@@ -453,7 +453,7 @@
 				<div id="subject-error" class="form-group"></div>
 			</div>
               <div class="form-group">
-                <textarea  name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message" onkeyup="validateMessage()"></textarea>
+                <textarea  name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message *" onkeyup="validateMessage()"></textarea>
                 <div id="message-error" class="form-group"></div>
 			</div>
               <div class="form-group">
@@ -508,7 +508,7 @@
 	  $("#submit-form").submit((e)=>{
 	e.preventDefault()
 	$.ajax({
-		url:"https://script.google.com/macros/s/AKfycbwMV7WZPR7ABC3AkYmT1WAcpbt6KE0s-VuBAJVrxLUPwuK54_cMwEnpIRdaEnTLGcYrhw/exec",
+		url:"https://script.google.com/macros/s/AKfycbw_uA7VhAxOKyrRKm5U0RgSRYheZOxR_4J_fcmkl5kHZNxN5D2MIWEJt7eAhTWnet0njA/exec",
 		data:$("#submit-form").serialize(),
 		method:"post",
 		success:function (response){

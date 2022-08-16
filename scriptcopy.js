@@ -44,16 +44,12 @@ function validateEmail() {
 
 }
 function validateform(){
-    validatename()
-    validateEmail()
-    validateMessage()
-    validateSubject()
 
     if(!validatename() || !validateEmail() || !validateMessage() ||  !validateSubject()){
         var subject = document.getElementById("subject").value;
         {
 
-            submiterror.innerHTML = ""
+            submiterror.innerHTML = "Please fix error to submit"
             return false;
         }
       
@@ -82,13 +78,9 @@ function validateMessage(){
     var subject = document.getElementById("subject").value;
     var max = 10
     var min = subject.length;
-    
     if(min>max){
         subjecterror.innerHTML = "maximum limit exceded"
         return false;
-    }
-    if(min==0){
-        subjecterror.innerHTML = "subject Required"
     }
     else {
         subjecterror.innerHTML ='<i class="fa-solid fa-check"></i>' ;
