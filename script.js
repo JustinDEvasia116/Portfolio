@@ -4,17 +4,23 @@ var submiterror = document.getElementById("submit-error")
 var messageError = document.getElementById("message-error");
 var subjecterror = document.getElementById("subject-error")
 
-function validatename(){
+function validatename() {
+    var name = document.getElementById('name').value.trim();
 
-var name = document.getElementById("name").value;
-if(name.length==0){
-    nameError.innerHTML = "Name is required";
-    return false;
-}
-else{
+    if (name.length == 0) {
+        nameError.innerHTML = 'Name is Required';
+        nameError.style.color = 'red'
+        return false;
+    }
+
+    if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+        nameError.innerHTML = 'Write a FullName';
+        nameError.style.color = 'red'
+        return false;
+    }
+
     nameError.innerHTML = '<i class="fa-solid fa-check"></i>';
-    return true;
-}
+    
 }
 
 function validateEmail() {
