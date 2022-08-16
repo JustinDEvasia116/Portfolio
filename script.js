@@ -45,7 +45,7 @@ function validateEmail() {
 }
 function validateform(){
 
-    if(!validatename() || !validateEmail()){
+    if(!validatename() || !validateEmail() | !validateMessage() || !validateSubject()  )  {
 
         submiterror.innerHTML = "Please fix error to submit"
         return false;
