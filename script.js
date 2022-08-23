@@ -53,7 +53,7 @@ function validateform(){
         var subject = document.getElementById("subject").value;
         {
 
-            submiterror.innerHTML = ""
+            submiterror.innerHTML = "fields can't be blank"
             return false;
         }
       

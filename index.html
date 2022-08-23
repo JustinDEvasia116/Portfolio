@@ -433,6 +433,12 @@
           		</div>
           		<h3 class="mb-4">portfolio</h3>
 	            <p><a href="https://justindevasia116.github.io/Portfolio"></a></p>
+				<ul class="ftco-footer-social list-unstyled float-md-left float-lft ml-5 pl-4">
+              
+					<li class="ftco-animate"><a href="https://www.facebook.com/justin.devasia.54/" target="_blank"><span class="icon-facebook"></span></a></li>
+					<li class="ftco-animate"><a href="https://www.instagram.com/wizzard__eagle/" target="_blank"><span class="icon-instagram"></span></a></li>
+				  </ul>
+			   
 	          </div>
           </div>
         </div>
@@ -472,15 +478,7 @@
     </section>
 		
 
-    <footer class="ftco-footer ftco-section">
-     
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-              
-                <li class="ftco-animate"><a href="https://www.facebook.com/justin.devasia.54/" target="_blank"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="https://www.instagram.com/wizzard__eagle/" target="_blank"><span class="icon-instagram"></span></a></li>
-              </ul>
-           
-    </footer>
+    
     
   
 
@@ -509,8 +507,10 @@
 	e.preventDefault()
 	$.ajax({
 		url:"https://script.google.com/macros/s/AKfycbw_uA7VhAxOKyrRKm5U0RgSRYheZOxR_4J_fcmkl5kHZNxN5D2MIWEJt7eAhTWnet0njA/exec",
+	
 		data:$("#submit-form").serialize(),
 		method:"post",
+	
 		success:function (response){
 			alert("Form submitted successfully")
 			window.location.reload()
@@ -518,8 +518,8 @@
 		},
 		error:function (err){
 			alert("Something Error")
-
 		}
+ 
 	})
 })
 
